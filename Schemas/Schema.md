@@ -1,3 +1,5 @@
+>官方原版：http://mongoosejs.com/docs/guide.html
+
 ## 纲要
 
 如果你还不了解Mongoose如何工作，请先阅读[quickstart][]章节。如果你是从4.x版本迁移到5.x，请花点时间阅读[迁移指南][]。
