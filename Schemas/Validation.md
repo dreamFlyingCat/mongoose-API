@@ -264,9 +264,9 @@ Mongoose提供了一些内置的验证器。
       assert.equal(err.name, 'ValidationError');
     });
 
-### 嵌套对象中使用Required验证器
+### 对嵌套对象使用Required验证器
 
-对值为嵌套对象的属性进行验证是比较麻烦的，因为嵌套对象不是一个完善的paths。
+对类型嵌套对象的属性进行验证是比较棘手的，因为嵌套对象不完全成熟的路径。
 
     var personSchema = new Schema({
       name: {
@@ -299,7 +299,7 @@ Mongoose提供了一些内置的验证器。
     var error = person.validateSync();
     assert.ok(error.errors['name']);
 
-### 更新验证
+### 更新验证器
 
 上面实例中，你学习了document的验证。Mongoose也支持执行`update()`或`findOneAndUpdate()`时的更新验证。更新验证默认关闭。设置`runValidators`选项，开启`update()`或者`findOneAndUpdate()`的更新验证。请注意，更新验证之所以默认关闭，因为会有一些警告信息。
 
@@ -320,7 +320,7 @@ Mongoose提供了一些内置的验证器。
         'Invalid color');
     });
 
-### 更新验证和`this`
+### 更新验证器和`this`
 
 更新验证器和document validator会有些不同。下面示例中，color path的验证函数中this指向正在被验证的document。然而执行更新验证时，document可能不在服务器内存中更新，所以默认this未定义。
 
@@ -392,7 +392,66 @@ Mongoose提供了一些内置的验证器。
       assert.ok(error);
     });
   
+### 指定需要更新验证器的路径
 
+请注意一个非常重要的细节，只有在执行以下更新操作时，更新验证器才会运行：
+   * `$set`
+   * `$unset`
+   * `$push(>=4.8.0)`
+   * `$addToSet(>=4.8.0)`
+   * `$pull(>=4.12.0)`
+   * `$pullAll(>=4.12.0)`
+
+下例中的更新不会检查`number`值，所以更新可以执行成功，因为`$inc`操作不会执行更新验证器。 `$push`、`$addToSet`、`$pull`和`$pullAll`等操作不会验证数组本身，只会单独的验证数组中的元素。
+
+    var testSchema = new Schema({
+      number: { type: Number, max: 0 },
+      arr: [{ message: { type: String, maxlength: 10 } }]
+    });
+
+    // Update validators won't check this, so you can still `$push` 2 elements
+    // onto the array, so long as they don't have a `message` that's too long.
+    testSchema.path('arr').validate(function(v) {
+      return v.length < 2;
+    });
+
+    var Test = db.model('Test', testSchema);
+
+    var update = { $inc: { number: 1 } };
+    var opts = { runValidators: true };
+    Test.update({}, update, opts, function(error) {
+      // There will never be a validation error here
+      update = { $push: [{ message: 'hello' }, { message: 'world' }] };
+      Test.update({}, update, opts, function(error) {
+        // This will never error either even though the array will have at
+        // least 2 elements.
+      });
+    });
+
+### `$push`和`$addToSet`的更新验证
+
+执行`$push`和`$addToSet`操作时，也会执行更新验证器。
+
+    var testSchema = new Schema({
+      numbers: [{ type: Number, max: 0 }],
+      docs: [{
+        name: { type: String, required: true }
+      }]
+    });
+
+    var Test = db.model('TestPush', testSchema);
+
+    var update = {
+      $push: {
+        numbers: 1,
+        docs: { name: null }
+      }
+    };
+    var opts = { runValidators: true };
+    Test.update({}, update, opts, function(error) {
+      assert.ok(error.errors['numbers']);
+      assert.ok(error.errors['docs']);
+    });
 
 [ValidatorError]:http://mongoosejs.com/docs/api.html#error-validation-js
 [API]:http://mongoosejs.com/docs/api.html#schematype_SchemaType-validate
