@@ -5,6 +5,9 @@
 ### 第一次翻译英文文档，水平有限，很多不专业和错误的地方，欢迎大家多多指点。
 ### 翻译还在进行中，如果有小伙伴愿意加入一起完成，热烈欢迎。
 
+### 点击查看[快速开始][]开始学习吧！
+
 ###### 官方原版：http://mongoosejs.com/docs/guide.html
 
 [mongoose]:http://mongoosejs.com
+[快速开始]:https://github.com/dreamFlyingCat/mongoose-API/blob/master/Quick%20Start.md
