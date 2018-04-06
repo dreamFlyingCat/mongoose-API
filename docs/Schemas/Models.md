@@ -64,6 +64,9 @@ Models提供`remove`静态方法用来移除所有符合提交的documents。
 ### 更多
 [API docs][]还提供了很多其他的可用方法，例如[count][], [mapReduce][], [aggregate][], and [more][].
 
+## 下一章 —— [Documents][]
+
+[Documents]:https://github.com/dreamFlyingCat/mongoose-API/blob/master/docs/Schemas/Documents.md
 [API docs]:http://mongoosejs.com/docs/api.html#model_Model
 [count]:http://mongoosejs.com/docs/api.html#model_Model.count
 [mapReduce]:http://mongoosejs.com/docs/api.html#model_Model.mapReduce

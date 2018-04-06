@@ -77,6 +77,9 @@ model是一个class用于构造documents。在这种情况下，每个document�
 
 快速入门到此结束。现在我们成功的创建了一个schema并添加了一个自定义的实例方法，使用Mongoose在MongoDB中保存并查询了kittens的文档。进阶学习前往查看[guide][]或者[API文档][]。
 
+## 下一章 —— [mongoose指南][]
+
+[mongoose指南]:https://github.com/dreamFlyingCat/mongoose-API/blob/master/docs/Schemas/Schema.md
 [guide]:https://github.com/dreamFlyingCat/mongoose-API/blob/master/docs/Schemas/Schema.md
 [API文档]:http://mongoosejs.com/docs/api.html
 [mongoDB]:https://www.mongodb.com/download-center

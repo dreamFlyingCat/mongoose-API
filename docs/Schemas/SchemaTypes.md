@@ -236,6 +236,9 @@ mongoose支持[plugins][]扩展自定义schemaTypes，查看[plugins][]网站查
 
 可以使用该函数查看path的schema类型，包括验证器和字段的类型。
 
+## 下一章 —— [Connections][]
+
+[Connections]:https://github.com/dreamFlyingCat/mongoose-API/blob/master/docs/Schemas/Connections.md
 
 [plugins]: http://plugins.mongoosejs.io/
 [mongoose-long]:https://github.com/aheckmann/mongoose-long

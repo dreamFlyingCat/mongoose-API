@@ -116,6 +116,9 @@ mongoose数组方法如[push][]、[unshift][]、[addToSet][]等将参数显式�
         children: [new Schema({ name: 'string' })]
     });
 
+## 下一章 —— [Queries][]
+
+[Queries]:https://github.com/dreamFlyingCat/mongoose-API/blob/master/docs/Schemas/Queries.md
 [remove]:http://mongoosejs.com/docs/api.html#types_array_MongooseArray.remove
 [push]:http://mongoosejs.com/docs/api.html#types_array_MongooseArray.push
 [unshift]:http://mongoosejs.com/docs/api.html#types_array_MongooseArray.unshift

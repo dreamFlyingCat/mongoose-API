@@ -453,6 +453,9 @@ Mongoose提供了一些内置的验证器。
       assert.ok(error.errors['docs']);
     });
 
+## 下一章 —— [Middleware][]
+
+[Middleware]:https://github.com/dreamFlyingCat/mongoose-API/blob/master/docs/Schemas/Middleware.md
 [ValidatorError]:http://mongoosejs.com/docs/api.html#error-validation-js
 [API]:http://mongoosejs.com/docs/api.html#schematype_SchemaType-validate
 [FAQ]:http://mongoosejs.com/docs/faq.html

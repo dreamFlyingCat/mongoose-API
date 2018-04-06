@@ -588,6 +588,9 @@ mongoose v4版本执行`update()`和`findOneAndUpdate()`操作时只会检查顶
 
 schema允许使用[插件][]，这样我们将有用的功能打包成插件，在社区或者项目中实现共享。
 
+## 下一章 —— [SchemaTypes][]
+
+[schemaTypes]:https://github.com/dreamFlyingCat/mongoose-API/blob/master/docs/Schemas/SchemaTypes.md
 [geoJSON]:https://docs.mongodb.com/manual/reference/geojson/
 [插件]:http://mongoosejs.com/docs/plugins.html
 [collation总览]:http://thecodebarbarian.com/a-nodejs-perspective-on-mongodb-34-collations
