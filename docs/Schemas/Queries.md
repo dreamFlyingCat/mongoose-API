@@ -71,6 +71,9 @@ MongoDB没有joins功能，但是有时我们想引用其它collections中的文
 
 你可以流式从MongoDB中查询文档。调用[Query#cursor()][]会返回[QueryCursor][]实例。
 
+## 下一章 —— [Validation][]
+
+[Validation]:https://github.com/dreamFlyingCat/mongoose-API/blob/master/docs/Schemas/Validation.md
 [MongoDB shell]:http://docs.mongodb.org/manual/tutorial/query-documents/
 [API]:http://mongoosejs.com/docs/api.html#model-js
 [查看]:http://mongoosejs.com/docs/api.html#query_Query-populate

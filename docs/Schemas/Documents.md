@@ -73,3 +73,7 @@ Mongoose提供了丰富的方法，从MongoDB中检索document，详情请查看
         // Now `otherTank` is a copy of `tank`
         otherTank.set(tank);
     });
+
+## 下一章 —— [Subdocuments][]
+
+[Subdocuments]:https://github.com/dreamFlyingCat/mongoose-API/blob/master/docs/Schemas/Subdocuments.md

@@ -1,3 +1,5 @@
+>官方原版：http://mongoosejs.com/docs/guide.html
+
 ## 纲要
 
 如果你还不了解Mongoose如何工作，请先阅读[quickstart][]章节。如果你是从4.x版本迁移到5.x，请花点时间阅读[迁移指南][]。
@@ -586,6 +588,9 @@ mongoose v4版本执行`update()`和`findOneAndUpdate()`操作时只会检查顶
 
 schema允许使用[插件][]，这样我们将有用的功能打包成插件，在社区或者项目中实现共享。
 
+## 下一章 —— [SchemaTypes][]
+
+[schemaTypes]:https://github.com/dreamFlyingCat/mongoose-API/blob/master/docs/Schemas/SchemaTypes.md
 [geoJSON]:https://docs.mongodb.com/manual/reference/geojson/
 [插件]:http://mongoosejs.com/docs/plugins.html
 [collation总览]:http://thecodebarbarian.com/a-nodejs-perspective-on-mongodb-34-collations
