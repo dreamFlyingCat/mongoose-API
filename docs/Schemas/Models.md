@@ -1,3 +1,5 @@
+> 版权声明：本文为博主辛苦翻译，未经博主允许不得转载。
+
 ## Models
 Modes是由Schema编译而成的假想（fancy）构造器，具有抽象属性和行为。Model的每一个实例（instance）就是一个document。document可以保存到数据库和从数据库返回。document的创建和搜索均可以通过操作model完成。
 

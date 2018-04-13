@@ -1,3 +1,5 @@
+> 版权声明：本文为博主辛苦翻译，未经博主允许不得转载。
+
 ## `model.discriminator`函数
 
 鉴别器是一种schema继承机制。 它们使您可以拥有多个模型通过重叠相同基础MongoDB集合的schema。

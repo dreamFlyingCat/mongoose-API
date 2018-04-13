@@ -1,3 +1,6 @@
+
+> 版权声明：本文为博主辛苦翻译，未经博主允许不得转载。
+
 ## Sub Docs
 
 SubDocuments是嵌套在其他documents中的documents，这意味着你可以在Schemas中嵌套Schemas。Mongoose支持两种不同形式的subdocuments：subdocuments数组和单独嵌套的subdocuments（mongoose版本大于等于4.2.0）。

@@ -1,3 +1,5 @@
+> 版权声明：本文为博主辛苦翻译，未经博主允许不得转载。
+
 ### Connections
 
 你可以使用` mongoose.connect()`方法连接mongoDB数据库。

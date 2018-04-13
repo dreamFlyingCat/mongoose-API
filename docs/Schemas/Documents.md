@@ -1,3 +1,5 @@
+> 版权声明：本文为博主辛苦翻译，未经博主允许不得转载。
+
 ## Documents
 
 Mongoose [documents][]和数据库中存储的document一一对应。每一个document都是它的Model的实例。

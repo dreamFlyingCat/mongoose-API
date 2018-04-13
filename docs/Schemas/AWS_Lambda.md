@@ -1,3 +1,5 @@
+> 版权声明：本文为博主辛苦翻译，未经博主允许不得转载。
+
 ## 在WS Lambda中使用Mongoose
 
 AWS Lambda是一种流行的任意功能的服务，无需管理单个服务器。 在您的[AWS Lambda][]函数中使用Mongoose很容易。 下面是一个连接到MongoDB实例并找到单个文档的示例函数：

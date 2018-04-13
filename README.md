@@ -1,6 +1,6 @@
 >官方原版：http://mongoosejs.com/docs/guide.html
 
-> 给为看官，如果觉得本文不错，求给星星，我会再接再厉的
+> 版权声明：本文为博主辛苦翻译，未经博主允许不得转载。
 
 # mongoose v5.0.12 中文API
 

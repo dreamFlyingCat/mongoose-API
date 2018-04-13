@@ -1,4 +1,6 @@
 >官方原版：http://mongoosejs.com/docs/guide.html
+> 版权声明：本文为博主辛苦翻译，未经博主允许不得转载。
+
 
 ## 纲要
 

@@ -1,3 +1,5 @@
+> 版权声明：本文为博主辛苦翻译，未经博主允许不得转载。
+
 ### SchemaTypes
 
 SchemaTypes定义路径（path）的[dufaults][]、[validation][]、[getters][]、[setters][]及查询时默认选择的[field][]等属性，还有Strings和Numbers的其他的一些特征。
